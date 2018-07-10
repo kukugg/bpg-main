@@ -1,0 +1,16 @@
+package com.bpg.lr.service.login;
+
+import com.bpg.lr.login.model.SysUser;
+import com.bpg.lr.service.baseService.BaseService;
+
+/**
+ * @Title:loginService
+ * @Description:	
+ * @Author hjp	
+ * @Date 2018年7月4日
+ */
+public interface SysUserService extends BaseService<SysUser>{
+	
+	
+
+}

@@ -1,0 +1,11 @@
+package com.bpg.lr.login.dao;
+
+
+import com.bpg.lr.baseDao.BaseDao;
+import com.bpg.lr.login.model.SysUser;
+
+public interface SysUserMapper extends BaseDao<SysUser>{
+   
+	
+    
+}

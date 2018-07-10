@@ -1,0 +1,68 @@
+package com.bpg.lr.serviceImpl.login;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bpg.lr.login.dao.SysUserMapper;
+import com.bpg.lr.login.model.SysUser;
+import com.bpg.lr.service.login.SysUserService;
+
+/**
+ * @Title:LoginServiceImpl
+ * @Description:人员管理实现类	
+ * @Author hjp	
+ * @Date 2018年7月4日
+ */
+@Service
+public class SysUserServiceImpl implements SysUserService{
+
+	@Autowired
+	SysUserMapper sysUserMapper;
+	
+	@Override
+	public void deleteByPrimaryKey(Long id) {
+		
+	}
+
+	@Override
+	public int insert(SysUser record) {
+		return 0;
+	}
+
+	@Override
+	public int insertSelective(SysUser record) {
+		return 0;
+	}
+
+	@Override
+	public SysUser selectByPrimaryKey(Long id) {
+		Map<String, Object> params = new HashMap<String,Object>();
+		params.put("userId", id);
+		SysUser selectByPrimaryKey = sysUserMapper.selectByPrimaryKey(params);
+		return selectByPrimaryKey;
+	}
+
+	@Override
+	public int updateByPrimaryKeySelective(SysUser record) {
+		return 0;
+	}
+
+	@Override
+	public int updateByPrimaryKey(SysUser record) {
+		return 0;
+	}
+
+	@Override
+	public List<SysUser> getAll() {
+		return null;
+	}
+
+	
+
+	
+
+}

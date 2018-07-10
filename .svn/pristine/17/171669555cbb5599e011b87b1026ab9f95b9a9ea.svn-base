@@ -1,0 +1,33 @@
+package com.bpg.lr.controller.login;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.bpg.lr.service.login.SysUserService;
+
+
+/**
+ * @Title:SysUserController
+ * @Description:用户管理	
+ * @Author hjp	
+ * @Date 2018年7月4日
+ */
+@RestController
+@RequestMapping("/sys/user")
+public class SysUserController {
+	
+	private static final Logger log = LoggerFactory.getLogger(SysUserController.class);
+
+		
+	@Autowired
+	SysUserService sysUserService;
+	
+	@RequestMapping("/test")
+	public void test() {
+		sysUserService.selectByPrimaryKey(1L);
+	}
+		
+}
